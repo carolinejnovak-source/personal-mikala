@@ -4,7 +4,14 @@ from auth import login_required, APP_USERNAME, APP_PASSWORD
 app = Flask(__name__)
 app.secret_key = "personal-mikala-secret-key-2026"
 
-PROJECTS = []  # populated as personal projects are added
+PROJECTS = [
+    {
+        "name": "Personal Spending Dashboard",
+        "description": "Monthly spending tracker with custom categories, drill-down charts, and Chase CSV import.",
+        "url": "https://personal-spending.onrender.com",
+        "status": "live",
+    },
+]
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
