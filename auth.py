@@ -1,12 +1,22 @@
 """
-Shared auth module — username/password session login.
-Import and use the `login_required` decorator on any route.
+Shared auth module — multi-user username/password session login.
 """
 from functools import wraps
 from flask import session, redirect, url_for, request
 
+# { username_lowercase: password_lowercase }
+USERS = {
+    "carolinejnovak": "crap",
+    "teresa":         "googlegoddess",
+}
+
+# Legacy compat
 APP_USERNAME = "CarolineJNovak"
 APP_PASSWORD = "crap"
+
+
+def check_credentials(username, password):
+    return USERS.get(username.lower()) == password.lower()
 
 
 def login_required(f):

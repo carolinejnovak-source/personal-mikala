@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-from auth import login_required, APP_USERNAME, APP_PASSWORD
+from auth import login_required, check_credentials
 
 app = Flask(__name__)
 app.secret_key = "personal-mikala-secret-key-2026"
@@ -24,7 +24,7 @@ def login():
     if request.method == "POST":
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "").strip()
-        if username.lower() == APP_USERNAME.lower() and password.lower() == APP_PASSWORD.lower():
+        if check_credentials(username, password):
             session["logged_in"] = True
             session["username"] = username
             return redirect(request.args.get("next") or url_for("index"))
