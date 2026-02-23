@@ -6,6 +6,12 @@ app.secret_key = "personal-mikala-secret-key-2026"
 
 PROJECTS = [
     {
+        "name": "Mom Radio 📻",
+        "description": "Music discovery for millennial moms — 30 curated US & European songs, thumbs up/down reactions, and Spotify-style recommendations.",
+        "url": "https://mom-radio.onrender.com",
+        "status": "live",
+    },
+    {
         "name": "Personal Spending Dashboard",
         "description": "Monthly spending tracker with custom categories, drill-down charts, and Chase CSV import.",
         "url": "https://personal-spending.onrender.com",
