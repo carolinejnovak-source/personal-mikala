@@ -7,7 +7,6 @@ from flask import session, redirect, url_for, request
 # { username_lowercase: password_lowercase }
 USERS = {
     "carolinejnovak": "crap",
-    "teresa":         "googlegoddess",
 }
 
 # Legacy compat
