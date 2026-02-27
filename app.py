@@ -17,6 +17,12 @@ PROJECTS = [
         "url": "https://personal-spending.onrender.com",
         "status": "live",
     },
+    {
+        "name": "Stock Tracker 📈",
+        "description": "Live stock prices, 1-year and 5-year averages, and interactive price history charts for 20 healthcare IT companies.",
+        "url": "https://stock-tracker-d9xo.onrender.com",
+        "status": "live",
+    },
 ]
 
 @app.route("/login", methods=["GET", "POST"])
