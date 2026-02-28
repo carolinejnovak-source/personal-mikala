@@ -23,6 +23,12 @@ PROJECTS = [
         "url": "https://stock-tracker-d9xo.onrender.com",
         "status": "live",
     },
+    {
+        "name": "Mikala Spending 🌙",
+        "description": "Monthly cost tracker for all Mikala-related subscriptions — Render, Hostinger, GitHub, SlyNumber, and Anthropic token spend.",
+        "url": "https://mikala-spending.onrender.com",
+        "status": "live",
+    },
 ]
 
 @app.route("/login", methods=["GET", "POST"])
